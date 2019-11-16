@@ -2,38 +2,44 @@
 <html>
     <head>
         <title>Michael McClung | Software Engineer Student</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     </head>
 
-    <body>
-        <header>
-            <img src="https://www.depts.ttu.edu/careercenter/images/slideshow/HireRedRaiders.jpg" class="profile-img">
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                </ul>
-            </nav>
+    <body style="background-color: #5CB96F">
+        <header style="background-color: #5CB96F">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+
+            <!--- dropdown for contact nav bar --->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">CONTACT <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.linkedin.com/in/mrmcclung">LINKEDIN</a></li>
+                <li><a href="mailto:michael.mcclung08@gmail.com">EMAIL</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
         </header>
-        <main>
             <section id="home">
                 <div class="section-inner">
-                    <img src="https://raw.githubusercontent.com/michael-mcclung/michael-mcclung.github.io/master/Index_Myself_Pic.png">
+                    <span class="text-center">
+                        <div><img src="Index_Myself_Pic.png" class="rounded mx-auto d-block"></div>
                     <h2>Hello, I'm Michael McClung!</h2>
                     <h1>Welcome to my website! Feel free to check out my other pages
                         <br>About tab will tell more about myself along with my skills and experience</br>
                         <br>ENJOY!</br>
                     </h1>
+                    </span>
                 </div>
             </section>
-        </main>
-        <footer>
-                <div class="section-inner">
-                    <h3> Contact Information </h3>
-                    <p><a href="https://www.linkedin.com/in/mrmcclung"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhykrUwpa9JOX71UOZnRmOnXo0PxfNVUywYdDVx6vkn3P7YCr0" width="150" height="40"></a>
-                    <a href="mailto:michael.mcclung08@gmail.com"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZwGu3G-AeLXvg7_OSKVkRxZMiAONg9kF4X7HU9I0eJox1MIe" width="150" height="40"></a></p>
-                </div>
+        <footer style="background-color: #5CB96F">
             © Michael McClung, 2019
         </footer>
     </body>
