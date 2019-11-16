@@ -1,42 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head style="background-color: #5CB96F">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
         <title>Michael McClung | Software Engineer Student</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     </head>
 
-    <body>
+    <body style="background-color: #5CB96F">
         <header>
-            <img src="https://www.depts.ttu.edu/careercenter/images/slideshow/HireRedRaiders.jpg" class="profile-img">
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                </ul>
-            </nav>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+
+            <!--- dropdown for contact nav bar --->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">CONTACT <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.linkedin.com/in/mrmcclung">LINKEDIN</a></li>
+                <li><a href="mailto:michael.mcclung08@gmail.com">EMAIL</a></li>
+              </ul>
+            </li>
+          </ul>
         </header>
-        <main>
-            <section id="aboutme">
-            <div class="col-container">
-                <div class="sticky">
-                    <h3 id="sticky">About me</h3>
-                </div>
-                <div class="col">
-                    <p>I'm currently a student at <b><a class="aboutsection" href="https://www.ttu.edu">Texas Tech University</a></b> studying <b><a class="aboutsection" href="http://www.depts.ttu.edu/cs/">Computer Science</a></b>. I have worked at <b><a class="aboutsection" href="http://www.global-technology-integrators.com">Global Technology Inivators</a></b> and a 2.5 month internship at <b><a class="aboutsection" href="https://www.northropgrumman.com/Pages/default.aspx">Northrop Grumman</a></b>.</p>
+        <div class="container">
+        <!-- Use nav-pills, nav-tabs. To center tabs add nav-justified to the class for ul -->
+        <ul class="nav nav-pills">
+          <li><a data-toggle="tab" href="#current">CURRENT</a></li>
+          <li><a data-toggle="tab" href="#past">PAST</a></li>
+          <li><a data-toggle="tab" href="#hobbies">HOBBIES</a></li>
+        </ul>
+         
+        <div class="tab-content">
+          <div id="current" class="tab-pane fade">
+            <p>I'm currently a student at <b><a class="aboutsection" href="https://www.ttu.edu">Texas Tech University</a></b> studying <b><a class="aboutsection" href="http://www.depts.ttu.edu/cs/">Computer Science</a></b>. I have worked at <b><a class="aboutsection" href="http://www.global-technology-integrators.com">Global Technology Inivators</a></b> and a two and a half month internship at <b><a class="aboutsection" href="https://www.northropgrumman.com/Pages/default.aspx">Northrop Grumman</a></b>.
+            I have a passion for learning and expanding my skills. Texas Tech University facualty and staff has made that possible for me and motivated me to be the best that I can be. Wreck'em Tech!</p>
 
-                    <p>As I progress in school I want to be able to improve my web developement skiils along with perfecting my C++ and Java skills. Once I start working with <b><a class="aboutsection" href="https://www.raytheon.com/">Raytheon</a></b> after I graduate, I will be able to help our soldiers in the military. I have a keen eye for design to create amazing products. My goal is to always build applications that are scalable and efficient while providing engaging experiences.</p>
+            <p>As I progress in school I want to be able to improve my web developement skiils along with perfecting my C++ and Java skills. I have a keen eye for design and believe I will be able to create amazing products. My goal is to always build applications that are scalable and efficient while providing engaging experiences. If I am not in front of a computer screen, I am probaly out in the nature or traveling. I also enjoy playing guitar, working out, and being around friends and family.</p>
+          </div>
+          <div id="past" class="tab-pane fade">
+            <p>Ever since I was a child I have always been into fixing things. One time my grandma could not figure out how to make the VHS tape player work. I believe I was about 10 years old. I walked over and with in 10 or less minutes I got the VHS to turn on and play the movie.</p>
 
-                    <p>If I am not in front of a computer screen, I am probaly out in the nature or at a beach. I also enjoy playing guitar, working out, and being around friends and family.</p>
-                </div>
-            </div>
-            </section>
+            <p>When I was in school I was great at mathmatical problems and once I got to high school I was so far ahead of most my class mates because in middle school I went to a private school. I figured out that private schools had better professors and helped me to excel far beyond what I would have been able to acheive in a public school. I also had dyslexia and never let it get the best of me. I was able to get extra tutoring at St. John's Episcopal School and over came it sometime in high school.</p>
+          </div>
+          <div id="hobbies" class="tab-pane fade">
+            <p>I love to travel, as I progress in my career I plan to travel the world. I have made another page that shows where I have been so far and I will add more along the way through out my life. I also love to play guitar... when I play I am in another world and feel free. I am starting to try to get into working out. I have always been told that as long as you have a healthy heart, your body will thank you and reward you with a long and prosperous life. Finally, I like to try to work on my programming skills and knowledge, in example I am recently updating this website through github and soon hope to mave my own website with my own custom name.</p>
+          </div>
+        </div>
+    </div>
+    <!---
             <section id="skills">
                 <div class="col-container">
-                    <div class="sticky">
-                        <h3>Skills</h3>
-                    </div>
+                        <h3 id="sticky">Skills</h3>
                     <div class="col">
+                        <b>WORK EXPERIENCE</b>
+                            <table>
+                                <tr>
+                                    <th>COMPANY</th>
+                                    <th>DATE FROM</th>
+                                    <th>DATE TO</th>
+                                    <th>TYPE</th>
+                                </tr>
+                                <tr>
+                                    <td>Northrop Grumman</td>
+                                    <td>Aug 2019</td>
+                                    <td>Jun 2019</td>
+                                    <td>Internship</td>
+                                </tr>
+                                <tr>
+                                    <td>Global Technology Integrators</td>
+                                    <td>Jan 2015</td>
+                                    <td>Aug 2016</td>
+                                    <td>Full-time</td>
+                                </tr>
+                            </table>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">LANGUAGES
+                      <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                     
+                        <li class="dropdown-header">Marvel</li>
+                        <li><a href="#">JAVA</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">SQL</a></li>
+                     
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">DC</li>
+                     
+                        <li class="disabled"><a href="#">Superman</a></li>
+                        <li><a href="#">Batman</a></li>
+                        <li><a href="#">Flash</a></li>
+                      </ul>
+                    </div>
+                    </div><br>
+                    <div class="colTwo">
                         <b>LANGUAGES</b>
                             <p>Java</p>
                             <p>C++</p>
@@ -68,14 +133,11 @@
                     </div>
                 </div>     
             </section>
-            </main>
-            <footer>
-                <div class="section-inner">
-                    <h3> Contact Information </h3>
-                    <p><a href="https://www.linkedin.com/in/mrmcclung"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhykrUwpa9JOX71UOZnRmOnXo0PxfNVUywYdDVx6vkn3P7YCr0" width="150" height="40"></a>
-                    <a href="mailto:michael.mcclung08@gmail.com"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZwGu3G-AeLXvg7_OSKVkRxZMiAONg9kF4X7HU9I0eJox1MIe" width="150" height="40"></a></p>
-                </div>
+            --->
+            <footer style="background-color: #5CB96F">
             © Michael McClung, 2019
         </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </body>
 </html>
