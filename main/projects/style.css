@@ -1,94 +1,139 @@
-/* ====== Body & Navbar spacing ====== */
+/* ==========================
+   Body & Navbar spacing
+   ========================== */
 body {
-    background-color: #F2F4AF;
-    font-family: "Poppins", sans-serif;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+    /* navbar offset */
+    background: #f2f4af;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    font-weight: 700;
-    color: #333 !important;
-}
-
-h1#title {
-    text-align: center;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px #fff;
-    border-bottom: 3px solid #333;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
+/* ==========================
+   Projects Section Styling
+   ========================== */
 .section-card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+    padding: 80px 20px;
 }
 
-.project-card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+#title {
     text-align: center;
-    transition: transform 0.2s ease-in-out;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #111;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Cards */
+.project-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 123, 255, 0.25);
+    background: linear-gradient(145deg, #f9f9f9, #ffffff);
 }
 
+/* Year Styling */
 .project-card h1 {
     font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
     margin-bottom: 10px;
 }
 
+/* Project Title */
 .project-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 15px;
+    color: #111;
 }
 
+/* Description */
 .project-card p {
     font-size: 0.95rem;
-    line-height: 1.5;
-    color: #555;
-}
-
-.project-card video {
-    border-radius: 10px;
+    color: #333;
     margin-bottom: 15px;
-    width: 100%;
-    height: auto;
+    line-height: 1.5;
 }
 
+/* Video styling */
+.project-card video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.project-card .btn-primary {
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.project-card .btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: scale(1.05);
+}
+
+/* Fade-in animation for cards */
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer styling */
 footer {
     text-align: center;
-    margin-top: 60px;
     padding: 20px;
-    background: #fff;
-    border-top: 1px solid #ddd;
+    background-color: #ffffffcc;
     color: #555;
-}
-
-.btn-primary {
-    background-color: #333;
-    border: none;
-    border-radius: 25px;
-    padding: 8px 20px;
-    font-weight: 500;
-}
-
-.btn-primary:hover {
-    background-color: #555;
+    font-size: 0.9rem;
+    margin-top: 60px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px 10px 0 0;
 }
