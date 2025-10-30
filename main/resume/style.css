@@ -1,0 +1,151 @@
+/* ==============================
+   Global Layout
+   ============================== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #b0e0e6, #f2f4af);
+    color: #111;
+    padding-top: 80px;
+    /* for navbar offset if reused */
+}
+
+/* ==============================
+   Resume Section
+   ============================== */
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.resume-section h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.resume-section p {
+    max-width: 650px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* ==============================
+   Resume Preview Card
+   ============================== */
+.resume-preview {
+    position: relative;
+    width: 80%;
+    max-width: 850px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.resume-preview:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Embedded PDF view */
+.resume-iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================
+   Download Button
+   ============================== */
+.download-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+    background: linear-gradient(90deg, #0056b3, #007bff);
+}
+
+/* ==============================
+   Floating Glow Animation
+   ============================== */
+.resume-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25), transparent 70%);
+    animation: pulseGlow 8s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes pulseGlow {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* ==============================
+   Responsive Design
+   ============================== */
+@media (max-width: 992px) {
+    .resume-iframe {
+        height: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-iframe {
+        height: 450px;
+    }
+
+    .resume-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .resume-section p {
+        font-size: 1rem;
+    }
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffffffaa;
+    color: #444;
+    margin-top: 60px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px 10px 0 0;
+}
