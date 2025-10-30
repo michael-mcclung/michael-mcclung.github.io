@@ -97,3 +97,127 @@ body {
 .skill-card ul li:hover {
     color: #007bff;
 }
+
+/* ===============================
+   SECTION LAYOUT ENHANCEMENTS
+   =============================== */
+
+/* Center and separate each .container section */
+.skills-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 40px;
+}
+
+/* Make multiple .skills-wrapper inside one .container sit side by side */
+.skills-wrapper {
+    flex: 1 1 320px;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Section header styling upgrade */
+.skills-section h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #111;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.skills-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+/* ===============================
+   RESPONSIVE ADJUSTMENTS
+   =============================== */
+
+@media (max-width: 992px) {
+    .skills-wrapper {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .skills-section .container {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+}
+
+/* ===============================
+   INTERACTIVE + ANIMATION EFFECTS
+   =============================== */
+
+/* Fade-in scroll effect */
+.skill-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animate each card slightly offset in timing */
+.skills-wrapper:nth-child(1) .skill-card {
+    animation-delay: 0s;
+}
+
+.skills-wrapper:nth-child(2) .skill-card {
+    animation-delay: 0.1s;
+}
+
+.skills-wrapper:nth-child(3) .skill-card {
+    animation-delay: 0.2s;
+}
+
+.skills-wrapper:nth-child(4) .skill-card {
+    animation-delay: 0.3s;
+}
+
+.skills-wrapper:nth-child(5) .skill-card {
+    animation-delay: 0.4s;
+}
+
+/* Section divider glow (optional subtle detail) */
+.skills-section {
+    background: linear-gradient(135deg, #b0e0e6, #f2f4af);
+    position: relative;
+}
+
+.skills-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.4), transparent);
+}
