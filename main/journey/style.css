@@ -221,3 +221,20 @@ body {
     height: 2px;
     background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.4), transparent);
 }
+
+/* Navbar */
+.navbar {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #333 !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--accent) !important;
+}
