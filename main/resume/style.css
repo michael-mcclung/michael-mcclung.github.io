@@ -1,14 +1,6 @@
 /* ==============================
    Global Layout
    ============================== */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #b0e0e6, #f2f4af);
-    color: #111;
-    padding-top: 80px;
-    /* for navbar offset if reused */
-}
 
 /* ==============================
    Resume Section
@@ -135,15 +127,4 @@ body {
     .resume-section p {
         font-size: 1rem;
     }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    color: #555;
-    font-size: 0.9rem;
-    margin-top: 60px;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }

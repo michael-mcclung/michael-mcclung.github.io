@@ -1,10 +1,4 @@
 /* ====== Body & Navbar spacing ====== */
-body {
-    padding-top: 80px;
-    /* navbar fixed-top offset */
-    font-family: 'Poppins', sans-serif;
-    background: #f2f4af;
-}
 
 /* ==========================
    Skills Section - Pop Style
@@ -220,15 +214,4 @@ body {
     width: 60%;
     height: 2px;
     background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.4), transparent);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    color: #555;
-    font-size: 0.9rem;
-    margin-top: 60px;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }

@@ -1,10 +1,6 @@
 /* ==========================
    Body spacing
    ========================== */
-body {
-    font-family: 'Poppins', sans-serif;
-    padding-top: 80px;
-}
 
 /* ==========================
    Projects Section Styling
@@ -122,15 +118,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    color: #555;
-    font-size: 0.9rem;
-    margin-top: 60px;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
