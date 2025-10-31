@@ -22,9 +22,21 @@
           <h3>Plant Placement Analyzer (PPA)</h3>
           <p>Determines plant survivability by reading light, humidity, soil moisture, and temperature through sensors.
             Programmed in C++.</p>
-          <video controls>
-            <source src="Final Video V2.mp4" type="video/mp4">
-          </video>
+          <button id="openVideoBtn">🎥 Watch Video</button>
+
+          <div id="videoModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
+            <video controls style="width:80%;border-radius:10px;">
+              <source src="Final Video V2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <script>
+            const modal = document.getElementById('videoModal');
+            document.getElementById('openVideoBtn').onclick = () => modal.style.display = 'flex';
+            modal.onclick = () => modal.style.display = 'none';
+          </script>
+
           <a href="https://github.com/michael-mcclung/Plant-Placement-Analyzer" class="btn btn-primary">GitHub</a>
         </div>
       </div>
