@@ -1,0 +1,488 @@
+/* ==================================
+   GLOBAL VARIABLES & BASE UTILITIES
+   ================================== */
+
+:root {
+    --primary-bg: linear-gradient(135deg, #f2f4af, #b0e0e6);
+    --text-dark: #1a1a1a;
+    --accent: #007bff;
+}
+
+/* Shared keyframe animations */
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================================
+   HOME / HERO PAGE
+   ================================== */
+
+.home-page #home {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.home-page #home img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.home-page #home img:hover {
+    transform: scale(1.05);
+}
+
+.home-page #home h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.home-page #home h1 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Reusable fade-in utility on home page */
+.home-page .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* ==================================
+   SKILLS PAGE
+   ================================== */
+
+/* Skills Section - Pop Style */
+.skills-page .skills-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #b0e0e6, #f2f4af);
+    text-align: center;
+    position: relative;
+}
+
+/* Section title */
+.skills-page .skills-section h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #111;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.skills-page .skills-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+/* Wrapper layout inside skills section */
+.skills-page .skills-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 40px;
+}
+
+/* Each skills-wrapper behaves as a flex item holding one card/list */
+.skills-page .skills-wrapper {
+    flex: 1 1 320px;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Skill card */
+.skills-page .skill-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    padding: 35px 25px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+
+    /* fade-in on load */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.skills-page .skill-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2),
+        0 0 15px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(145deg, #f9f9f9, #ffffff);
+}
+
+.skills-page .skill-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.skills-page .skill-card:hover .icon {
+    transform: scale(1.2) rotate(8deg);
+    color: #00b4d8;
+}
+
+.skills-page .skill-card h5 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills-page .skill-card h5::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #00b4d8;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-page .skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.skills-page .skill-card ul li {
+    margin: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.skills-page .skill-card ul li:hover {
+    color: #007bff;
+}
+
+/* Staggered animation delays per wrapper */
+.skills-page .skills-wrapper:nth-child(1) .skill-card {
+    animation-delay: 0s;
+}
+
+.skills-page .skills-wrapper:nth-child(2) .skill-card {
+    animation-delay: 0.1s;
+}
+
+.skills-page .skills-wrapper:nth-child(3) .skill-card {
+    animation-delay: 0.2s;
+}
+
+.skills-page .skills-wrapper:nth-child(4) .skill-card {
+    animation-delay: 0.3s;
+}
+
+.skills-page .skills-wrapper:nth-child(5) .skill-card {
+    animation-delay: 0.4s;
+}
+
+/* Section divider glow */
+.skills-page .skills-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 123, 255, 0.4),
+            transparent);
+}
+
+/* Responsive adjustments for skills */
+@media (max-width: 992px) {
+    .skills-page .skills-wrapper {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-page .skills-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .skills-page .skills-section .container {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+}
+
+/* ==================================
+   PROJECTS PAGE
+   ================================== */
+
+.projects-page .section-card {
+    padding: 80px 20px;
+}
+
+.projects-page #title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #111;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Cards */
+.projects-page .project-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    /* fade-in animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.projects-page .project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2),
+        0 0 15px rgba(0, 123, 255, 0.25);
+    background: linear-gradient(145deg, #f9f9f9, #ffffff);
+}
+
+/* Year Styling */
+.projects-page .project-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Project Title */
+.projects-page .project-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* Description */
+.projects-page .project-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Video styling */
+.projects-page .project-card video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.projects-page .project-card .btn-primary {
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.projects-page .project-card .btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: scale(1.05);
+}
+
+/* Staggered fade-in for project cards */
+.projects-page .project-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.projects-page .project-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.projects-page .project-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.projects-page .project-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.projects-page .project-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.projects-page .project-card:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+/* ==================================
+   RESUME PAGE
+   ================================== */
+
+.resume-page .resume-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    /* ensures ::before glow is relative to this section */
+}
+
+.resume-page .resume-section h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.resume-page .resume-section p {
+    max-width: 650px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Resume Preview Card */
+.resume-page .resume-preview {
+    position: relative;
+    width: 80%;
+    max-width: 850px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.resume-page .resume-preview:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Embedded PDF view */
+.resume-page .resume-iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Download Button */
+.resume-page .download-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.resume-page .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+    background: linear-gradient(90deg, #0056b3, #007bff);
+}
+
+/* Floating Glow Animation */
+.resume-page .resume-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.25),
+            transparent 70%);
+    animation: pulseGlow 8s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes pulseGlow {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Responsive resume iframe */
+@media (max-width: 992px) {
+    .resume-page .resume-iframe {
+        height: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-page .resume-iframe {
+        height: 450px;
+    }
+
+    .resume-page .resume-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .resume-page .resume-section p {
+        font-size: 1rem;
+    }
+}
