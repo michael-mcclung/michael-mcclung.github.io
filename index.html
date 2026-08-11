@@ -3,29 +3,99 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% include head.html %}
 </head>
-
-<body class="home-page">
+<body class="home-page modern-site">
     {% include navbar.html %}
-    <!-- Hero Section -->
-    <section id="home" class="fade-in">
-        <div class="container">
-            <img src="indexSelfie.jpg" alt="Michael McClung portrait">
-            <h2>Hello, I'm Michael McClung 👋</h2>
-            <h1>Results-driven operations leader and former software developer with a proven track record
-                in optimizing field service management, dispatch operations, and technician performance.
-                Combines technical expertise with process innovation to streamline workflows, reduce
-                costs, and elevate customer satisfaction. Seeking to leverage a unique blend of technology
-                and management experience to drive operational excellence and team success in a growth-
-                focused service organization.
-            </h1>
-        </div>
-    </section>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">FULL STACK SOFTWARE ENGINEER</span>
+                    <h1>Building reliable software with a product and operations mindset.</h1>
+                    <p class="hero-lead">I'm Michael McClung, a software engineer with experience across enterprise development, operations leadership, and real-world process improvement. I build maintainable applications with Java, Spring Boot, Angular, REST APIs, SQL, AWS, and modern CI/CD practices.</p>
+                    <div class="hero-actions">
+                        <a class="btn-modern btn-primary-modern" href="/main/projects/index.html">View Projects</a>
+                        <a class="btn-modern btn-secondary-modern" href="/main/resume/index.html">View Resume</a>
+                    </div>
+                    <div class="hero-links">
+                        <a href="https://github.com/michael-mcclung" target="_blank" rel="noopener">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/in/mrmcclung" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        <a href="mailto:michael.mcclung08@gmail.com">Email ↗</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="portrait-frame">
+                        <img src="indexSelfie.jpg" alt="Michael McClung portrait">
+                    </div>
+                    <div class="availability-card">
+                        <span class="status-dot"></span>
+                        <div>
+                            <strong>Open to software engineering opportunities</strong>
+                            <span>Full Stack • Backend • Java / Spring Boot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">WHAT I BRING</span>
+                    <h2>Engineering experience backed by business context.</h2>
+                </div>
+                <div class="value-grid">
+                    <article class="value-card">
+                        <span class="card-number">01</span>
+                        <h3>Full Stack Development</h3>
+                        <p>Java, Spring Boot, Angular, Node.js, Python, SQL, REST APIs, microservices, and maintainable application architecture.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="card-number">02</span>
+                        <h3>Enterprise Engineering</h3>
+                        <p>Experience in production-focused environments using CI/CD, AWS, Jenkins, observability tools, Agile workflows, and collaborative delivery practices.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="card-number">03</span>
+                        <h3>Operations Leadership</h3>
+                        <p>A practical understanding of users, workflows, teams, and business outcomes—useful for turning real operational problems into better software.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section home-section-alt">
+            <div class="container recruiter-grid">
+                <div>
+                    <span class="eyebrow">CORE TECHNOLOGIES</span>
+                    <h2>A modern, production-minded toolkit.</h2>
+                    <p class="section-copy">Comfortable working across the application stack, from APIs and business logic to frontend experiences, databases, deployments, and production troubleshooting.</p>
+                </div>
+                <div class="tech-cloud">
+                    <span>Java 17/21</span><span>Spring Boot</span><span>Angular</span><span>REST APIs</span><span>Microservices</span><span>Node.js</span><span>Python</span><span>Oracle</span><span>MySQL</span><span>AWS</span><span>Jenkins</span><span>CI/CD</span><span>Liquibase</span><span>Grafana</span><span>Kibana</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-inner">
+                <div>
+                    <span class="eyebrow">LET'S CONNECT</span>
+                    <h2>Looking for an engineer who understands both code and the business behind it?</h2>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn-modern btn-primary-modern" href="mailto:michael.mcclung08@gmail.com">Contact Me</a>
+                    <a class="btn-modern btn-secondary-modern" href="/main/resume/index.html">Resume</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     {% include footer.html %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

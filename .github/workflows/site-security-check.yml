@@ -1,0 +1,31 @@
+name: Site security check
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate security basics
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f _includes/head.html
+          test -f SECURITY.md
+          grep -q "Content-Security-Policy" _includes/head.html
+          grep -q "upgrade-insecure-requests" _includes/head.html
+          if grep -RIn --include='*.html' --include='*.css' --include='*.js' 'http://' . --exclude-dir=.git; then
+            echo 'Insecure HTTP URL detected.'
+            exit 1
+          fi
+          echo 'Site security checks passed.'
