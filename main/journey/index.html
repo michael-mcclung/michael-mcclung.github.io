@@ -1,75 +1,66 @@
 ---
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    {% include head.html %}
-</head>
-
+<head>{% include head.html %}</head>
 <body class="skills-page">
-    {% include navbar.html %}
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="skills-wrapper">
-                <div class="skill-card">
-                    <div class="icon">🗄️</div>
-                    <h5>Global Technology Integrators</h5>
-                    <ul>
-                        <li>Project Management &</li>
-                        <li>Audio/Video Systems Design</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h2>College</h2>
-            <div class="skills-wrapper">
-                <div class="skill-card">
-                    <div class="icon">🎓</div>
-                    <h5>Texas Tech University</h5>
-                    <ul>
-                        <li>BA in Computer Science</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skills-wrapper">
-                <div class="skill-card">
-                    <div class="icon">📚</div>
-                    <h5>Richland Community College</h5>
-                    <ul>
-                        <li>AS in Computer Science</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h2>Careers</h2>
-            <div class="skills-wrapper">
-                <div class="skill-card">
-                    <div class="icon">⚙️</div>
-                    <h5>JP Morgan Chase & Co.</h5>
-                    <ul>
-                        <li>Software Developer II</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skills-wrapper">
-                <div class="skill-card">
-                    <div class="icon">🧠</div>
-                    <h5>Poseidon's Elite Plumbing, Inc.</h5>
-                    <ul>
-                        <li>Project Coordinator</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+{% include navbar.html %}
+<main class="experience-page-wrap">
+  <section class="page-hero compact-hero">
+    <div class="container">
+      <span class="eyebrow">EXPERIENCE</span>
+      <h1>Software engineering shaped by real-world operations.</h1>
+      <p>I bring enterprise development experience plus hands-on leadership in service operations, process improvement, customer workflows, and team execution.</p>
+    </div>
+  </section>
 
-    {% include footer.html %}
+  <section class="timeline-section">
+    <div class="container experience-grid">
+      <article class="experience-card featured-card">
+        <div class="experience-meta"><span>2020 — 2023</span><span class="experience-type">Software Engineering</span></div>
+        <h2>JPMorgan Chase &amp; Co.</h2>
+        <h3>Software Developer II</h3>
+        <p>Worked in an enterprise engineering environment building and supporting production software with modern backend, frontend, database, CI/CD, and observability practices.</p>
+        <div class="tag-row"><span>Java</span><span>Spring Boot</span><span>Angular</span><span>REST</span><span>CI/CD</span><span>AWS</span></div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-meta"><span>2024 — 2025</span><span class="experience-type">Operations</span></div>
+        <h2>Poseidon's Elite Plumbing</h2>
+        <h3>Onboarding &amp; Operations Manager</h3>
+        <p>Led operational workflows, onboarding, coordination, and process improvements in a field-service business—experience that strengthened my ability to understand users and translate business problems into practical systems.</p>
+        <div class="tag-row"><span>Operations</span><span>Process Design</span><span>Leadership</span><span>Workflow Improvement</span></div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-meta"><span>2025 — 2026</span><span class="experience-type">Operations</span></div>
+        <h2>Affordable Air</h2>
+        <h3>Lead Dispatch Manager</h3>
+        <p>Managed dispatch and field-service coordination while improving day-to-day execution, technician workflows, customer communication, and operational visibility.</p>
+        <div class="tag-row"><span>Dispatch</span><span>Field Operations</span><span>Team Coordination</span><span>Customer Experience</span></div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-meta"><span>Current</span><span class="experience-type">Independent</span></div>
+        <h2>Self-Employed Property Management</h2>
+        <h3>Property Manager</h3>
+        <p>Manage property-related operations, vendors, maintenance decisions, budgets, and tenant-facing responsibilities while continuing to build modern software projects.</p>
+        <div class="tag-row"><span>Ownership</span><span>Vendor Management</span><span>Problem Solving</span><span>Execution</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="education-section">
+    <div class="container">
+      <div class="section-heading"><span class="eyebrow">EDUCATION</span><h2>Computer science foundation.</h2></div>
+      <div class="education-grid">
+        <article class="mini-card"><h3>Texas Tech University</h3><p>Bachelor's degree in Computer Science</p></article>
+        <article class="mini-card"><h3>Richland Community College</h3><p>Associate degree in Computer Science</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+{% include footer.html %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
