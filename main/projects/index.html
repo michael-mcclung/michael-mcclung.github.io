@@ -1,100 +1,50 @@
 ---
-
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  {% include head.html %}
-</head>
-
+<head>{% include head.html %}</head>
 <body class="projects-page">
-  {% include navbar.html %}
-  <!-- Project Section -->
-  <div class="container mt-5 pt-5 section-card">
-    <h1 id="title">College Projects</h1>
-    <div class="row g-4 mt-3">
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <h1><b>2016</b></h1>
-          <h3>Plant Placement Analyzer (PPA)</h3>
-          <p>Determines plant survivability by reading light, humidity, soil moisture, and temperature through sensors.
-            Programmed in C++.</p>
-          <button id="openVideoBtn">🎥 Watch Video</button>
-
-          <div id="videoModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
-            <video controls style="width:80%;border-radius:10px;">
-              <source src="Final Video V2.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <script>
-            const modal = document.getElementById('videoModal');
-            document.getElementById('openVideoBtn').onclick = () => modal.style.display = 'flex';
-            modal.onclick = () => modal.style.display = 'none';
-          </script>
-
-          <a href="https://github.com/michael-mcclung/Plant-Placement-Analyzer" class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <h1><b>2017</b></h1>
-          <h3>Speaker Project</h3>
-          <p>MSP430G4553 board project using C and assembly to play songs via programmed musical notes through a
-            speaker.</p>
-          <a href="https://github.com/michael-mcclung/Speaker-Project" class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <h1><b>2018</b></h1>
-          <h3>Unix File System</h3>
-          <p>Simulated a Linux shell terminal supporting commands like mkdir, touch, cd, ls, help, and exit. Written in
-            C++.</p>
-          <a href="https://github.com/michael-mcclung/Unix-File-System" class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <h1><b>2019</b></h1>
-          <h3>Online Shopping System</h3>
-          <p>Console-based shopping app using Java OOP principles to simulate cart and checkout systems.</p>
-          <a href="https://github.com/michael-mcclung/JavaConsole_OnlineShoppingSystem"
-            class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <h1><b>2019</b></h1>
-          <h3>Blockchain Virtual Mouse</h3>
-          <p>Web UI for a virtual mouse using image processing, machine learning, and blockchain-based transactions.</p>
-          <a href="https://github.com/michael-mcclung/Blockchain-Virtual-Mouse" class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <h1><b>2020</b></h1>
-          <h3>uSecure App / Raspberry Pi</h3>
-          <p>Home security system using facial recognition, voice commands, motion detection, and smartphone control.
-          </p>
-          <a href="https://github.com/michael-mcclung/uSecure" class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-
+{% include navbar.html %}
+<main>
+  <section class="page-hero compact-hero">
+    <div class="container">
+      <span class="eyebrow">PROJECTS</span>
+      <h1>Software projects from full stack web apps to embedded systems.</h1>
+      <p>A selection of work that shows how I approach application development, APIs, data, systems thinking, and hands-on technical problem solving.</p>
     </div>
-  </div>
+  </section>
 
-  {% include footer.html %}
+  <section class="portfolio-projects">
+    <div class="container">
+      <article class="case-study featured-project">
+        <div class="case-study-copy">
+          <div class="experience-meta"><span>Featured Project</span><span class="experience-type">Full Stack</span></div>
+          <h2>RollWithDFW</h2>
+          <p class="project-intro">A modern DFW sushi review platform built as a full stack application, with a separate Angular frontend and Spring Boot backend.</p>
+          <div class="case-grid">
+            <div><strong>Frontend</strong><span>Angular, responsive UI, deployment-ready web experience</span></div>
+            <div><strong>Backend</strong><span>Java, Spring Boot, REST API architecture</span></div>
+            <div><strong>Deployment</strong><span>Frontend and backend structured for cloud hosting</span></div>
+            <div><strong>Focus</strong><span>Real-world product development beyond coursework</span></div>
+          </div>
+          <div class="tag-row"><span>Java</span><span>Spring Boot</span><span>Angular</span><span>REST APIs</span><span>Full Stack</span></div>
+          <div class="project-actions"><a class="btn-modern btn-primary-modern" href="https://github.com/michael-mcclung/rollwithdfw" target="_blank" rel="noopener">View Repository ↗</a></div>
+        </div>
+      </article>
 
+      <div class="section-heading project-heading"><span class="eyebrow">FOUNDATIONAL WORK</span><h2>Earlier engineering projects.</h2></div>
+      <div class="project-grid-modern">
+        <article class="project-tile"><span class="project-year">2020</span><h3>uSecure</h3><p>Home security system using facial recognition, voice commands, motion detection, Raspberry Pi hardware, and smartphone control.</p><div class="tag-row"><span>Raspberry Pi</span><span>Computer Vision</span><span>IoT</span></div><a href="https://github.com/michael-mcclung/uSecure" target="_blank" rel="noopener">GitHub ↗</a></article>
+        <article class="project-tile"><span class="project-year">2019</span><h3>Blockchain Virtual Mouse</h3><p>Web interface exploring image processing, machine learning concepts, virtual mouse interaction, and blockchain transactions.</p><div class="tag-row"><span>Web</span><span>Machine Learning</span><span>Blockchain</span></div><a href="https://github.com/michael-mcclung/Blockchain-Virtual-Mouse" target="_blank" rel="noopener">GitHub ↗</a></article>
+        <article class="project-tile"><span class="project-year">2019</span><h3>Online Shopping System</h3><p>Java console application using object-oriented programming concepts to model shopping-cart and checkout behavior.</p><div class="tag-row"><span>Java</span><span>OOP</span></div><a href="https://github.com/michael-mcclung/JavaConsole_OnlineShoppingSystem" target="_blank" rel="noopener">GitHub ↗</a></article>
+        <article class="project-tile"><span class="project-year">2018</span><h3>Unix File System</h3><p>C++ project simulating a command-line file system with familiar shell commands and directory operations.</p><div class="tag-row"><span>C++</span><span>Systems</span></div><a href="https://github.com/michael-mcclung/Unix-File-System" target="_blank" rel="noopener">GitHub ↗</a></article>
+        <article class="project-tile"><span class="project-year">2017</span><h3>Speaker Project</h3><p>Embedded project using an MSP430 microcontroller, C, and assembly to generate programmed musical notes through a speaker.</p><div class="tag-row"><span>C</span><span>Assembly</span><span>Embedded</span></div><a href="https://github.com/michael-mcclung/Speaker-Project" target="_blank" rel="noopener">GitHub ↗</a></article>
+        <article class="project-tile"><span class="project-year">2016</span><h3>Plant Placement Analyzer</h3><p>Sensor-based C++ system designed to evaluate plant survivability using light, humidity, soil moisture, and temperature data.</p><div class="tag-row"><span>C++</span><span>Sensors</span><span>Hardware</span></div><a href="https://github.com/michael-mcclung/Plant-Placement-Analyzer" target="_blank" rel="noopener">GitHub ↗</a></article>
+      </div>
+    </div>
+  </section>
+</main>
+{% include footer.html %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
