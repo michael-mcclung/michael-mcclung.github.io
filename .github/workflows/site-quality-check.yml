@@ -1,0 +1,67 @@
+name: Site quality check
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: false
+
+      - name: Install Jekyll and html-proofer
+        run: |
+          gem install jekyll webrick html-proofer --no-document
+
+      - name: Build site
+        run: jekyll build
+
+      - name: HTMLProofer (internal links + HTML)
+        run: |
+          htmlproofer ./_site \
+            --disable-external \
+            --allow-hash-href \
+            --ignore-empty-alt \
+            --no-enforce-https \
+            --ignore-urls "/^mailto:/,/^tel:/"
+
+      - name: Lychee external link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-mail
+            --exclude 'linkedin.com'
+            --exclude 'fonts.googleapis.com'
+            --exclude 'fonts.gstatic.com'
+            '_site/**/*.html'
+          fail: false
+
+      - name: Security basics
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f _includes/head.html
+          test -f SECURITY.md
+          grep -q "Content-Security-Policy" _includes/head.html
+          grep -q "upgrade-insecure-requests" _includes/head.html
+          if grep -RIn --include='*.html' --include='*.css' --include='*.js' 'http://' . --exclude-dir=.git --exclude-dir=_site; then
+            echo 'Insecure HTTP URL detected.'
+            exit 1
+          fi
+          test -f assets/resume/Michael-McClung-Resume-2025.pdf
+          echo 'Site quality checks passed.'
