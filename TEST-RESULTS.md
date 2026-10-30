@@ -91,7 +91,7 @@ LinkedIn: **not bot-checked**.
 
 | Viewport | Width × height (CSS px) | Result | Notes |
 |----------|-------------------------|--------|-------|
-| Mobile | 375 × 812 (example) | not yet measured | |
+| Mobile | 375 | **PASS** (team-reported) | Software Engineer, manual check of the live site https://michael-mcclung.github.io/ on Oct 29, 2026 at about 10:04 PM CT. Layout was clean with no horizontal overflow. Not re-measured in this change. |
 | Tablet | 768 × 1024 (example) | not yet measured | |
 | Desktop | 1440 × 900 (example) | not yet measured | |
 
@@ -150,4 +150,4 @@ Documentation Specialist did **not** re-run Lighthouse. The local table is the S
 | Software Engineer | Local links, PDF, HTML validation; Lighthouse home 93/100/100/100 (mobile) and 99/100/100/100 (desktop) | Oct 29, 2026 | Reported pass |
 | Documentation Specialist | Local `_site` HTTP inventory + PDF validity | Oct 29, 2026 | Internal local links + PDF pass; LinkedIn not bot-checked; production not measured that day |
 | Docs sync | Actions conclusions on master after `1a36f4f` and on `8b396d5`; live internal HTTP + PDF; production home-page Lighthouse recorded from the Oct 29, 2026 live measurement | Oct 30, 2026 | See §1, §2c, and §5. LinkedIn not bot-checked. |
-| Independent reviewer | | | not yet measured |
+| Independent reviewer | Chief of Staff reviewed PR #3 and checked the facts, the contact links, the 7 repo links, the real Jekyll build, and the rollback tag `pre-renovation-2026-10-29` | Oct 29, 2026, 9:41 PM CT | **PASS** (team-reported) |
