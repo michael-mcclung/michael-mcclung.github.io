@@ -1,20 +1,17 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="/index.html">Michael McClung<span style="color:#39d98a">.</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/main/journey/index.html">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="/main/projects/index.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="/main/resume/index.html">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/michael-mcclung" target="_blank" rel="noopener">GitHub ↗</a></li>
-                <li class="nav-item ms-lg-2"><a class="btn btn-sm px-3 py-2" style="background:#39d98a;color:#07111b;font-weight:800;border-radius:10px" href="mailto:michael.mcclung08@gmail.com">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav container" aria-label="Primary">
+    <a class="brand" href="{{ '/' | relative_url }}">Michael McClung<span>.</span></a>
+    <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-list" id="primary-nav">
+      <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+      <li><a href="{{ '/main/journey/' | relative_url }}">Experience</a></li>
+      <li><a href="{{ '/main/projects/' | relative_url }}">Projects</a></li>
+      <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
+      <li><a href="{{ '/main/resume/' | relative_url }}">Resume</a></li>
+      <li><a class="nav-cta" href="mailto:mmcclung1124@gmail.com?subject=Software%20engineering%20opportunity">Contact</a></li>
+    </ul>
+  </nav>
+</header>
