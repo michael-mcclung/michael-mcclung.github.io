@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] — renovation/portfolio-2026 (2026-10-29)
 
+- RollWithDFW card now points to the archived sushi app (`archive/sushi-app` branch); rollwithdfw.com moves to the tenant site once rollwithdfw PR #1 merges. Merge this after that PR.
+
 Verified from local branch tip `c25c2f7f3a730e9c9647788c1bfab7e1ff277733` (`git diff master...renovation/portfolio-2026`). Commits: `d61ab91` (layout + resume), `c25c2f7` (docs/SEO/CI helper).
 
 - `386bfbd`: About section now shows resume results near the top (1,000+ developer hours, 64% fewer chargebacks, 2× revenue, 20% lower time and fuel costs), and the RollWithDFW cards link to the source repo on GitHub.
