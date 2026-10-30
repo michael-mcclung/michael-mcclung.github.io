@@ -92,7 +92,7 @@ jekyll serve
 ```
 index.html                 Home — hero, about, experience, projects, skills, resume CTA, contact
 main/journey/index.html    Experience (dedicated page)
-main/projects/index.html   Projects (incl. RollWithDFW → rollwithdfw.com)
+main/projects/index.html   Projects (incl. archived RollWithDFW sushi app → GitHub archive branch)
 main/resume/index.html     HTML résumé (phone + print); PDF download links
 assets/resume/Michael-McClung-Resume-2025.pdf   Valid PDF (~96 KB), served as static asset
 assets/css/site.css
@@ -191,7 +191,7 @@ Update `CHANGELOG.md` with the new production SHA after any rollback.
 1. Add a card on `index.html` (projects section) and/or `main/projects/index.html`.  
 2. Use HTTPS links and `rel="noopener noreferrer"` on `target="_blank"`.  
 3. Do not invent employers, metrics, or features.  
-4. Note: **RollWithDFW** is a project card linking to https://rollwithdfw.com; it is **not** listed on the HTML résumé (pending Mac’s review whether it should appear there).
+4. Note: **RollWithDFW** is a project card for the archived sushi-review app (source: archive/sushi-app branch); it is **not** listed on the HTML résumé (pending Mac’s review whether it should appear there).
 
 ### Re-running link checks and Lighthouse
 
@@ -209,7 +209,7 @@ After merge, re-check production URLs and record scores separately. LinkedIn oft
 ## Known limitations
 
 1. **LinkedIn** is not reliably bot-verifiable (anti-bot / 999 / captcha). Human browser check required.  
-2. **RollWithDFW** appears as a project card (separate site) but is **not** on the résumé — pending Mac’s review.  
+2. **RollWithDFW** appears as a project card (archived sushi app; GitHub archive branch) but is **not** on the résumé — pending Mac’s review.  
 3. **Lighthouse** scores on record cover the **home page** only (local serve), not every route.  
 4. Production post-merge checks remain pending until `renovation/portfolio-2026` is merged and Pages redeploys.  
 5. No Gemfile pins local Jekyll to CI; rely on `build_static.py` or Pages action Ruby set.  
