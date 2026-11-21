@@ -42,4 +42,11 @@
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+
+  var printBtn = document.getElementById('print-resume');
+  if (printBtn) {
+    printBtn.addEventListener('click', function () {
+      window.print();
+    });
+  }
 })();

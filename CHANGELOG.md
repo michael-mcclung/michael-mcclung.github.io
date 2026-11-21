@@ -5,6 +5,25 @@ All notable changes to [michael-mcclung.github.io](https://github.com/michael-mc
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) where version tags are used. The portfolio renovation is merged to `master` (PR #3, `1a36f4f`, Oct 29, 2026) and live on GitHub Pages. Rollback tag `pre-renovation-2026-10-29` points to `fda53c8`.
 
+## [2026-11-21] — Shoebox promo and Folio
+
+- Home page has a Shoebox Business band under the hero, with Mac’s tagline, a short original description of the accounting software, and a link to shoeboxbusiness.com.
+- The hero photo badge no longer names ServiceTitan or Service Fusion.
+- Projects include Folio, the Next.js personal ledger. The card links only to the GitHub repo and uses a local copy of the repo’s dashboard screenshot.
+
+## [2026-11-21] — blue-led palette
+
+- Navy and royal blue lead the hero, page headers, buttons, headings, tags, and experience timeline. Gold is limited to the hero rule, the active navigation underline, and the eyebrow mark on dark bands. Section bands alternate white and a light blue tint. The footer stays navy.
+
+## [2026-11-21] — portfolio refresh
+
+- Experience is ordered newest first and matches the current operations and tech résumés: Shoebox Business (Partner, Marketing & Client Development, Oct 2026 – Present), Roll With DFW (May 2025 – Present), Affordable Air (May 2025 – Aug 2026), Poseidon's Elite Plumbing (Jan 2024 – May 2025), plus refreshed JPMorgan Chase, Northrop Grumman, and Global Technologies Integrators entries.
+- Hero and About use the current headline (role line plus tags) and the LinkedIn About text. Shoebox is described only with the résumé bullets.
+- Résumé downloads are the current operations and tech PDFs. The previous `Michael-McClung-Resume-2025.pdf` is removed. The phone number stays on the résumé page because the previous résumé already published it.
+- Theme is navy, gold, and white. Green is removed.
+- Projects feature the live Roll With DFW tenant site, Service Jobs API (Java 21 / Spring Boot), and Sales Cleanup Report. Descriptions follow those repositories' READMEs.
+- Print control moved from an inline handler into `site.js` so it runs under the existing Content Security Policy.
+
 ## [2026-10-30] — docs sync
 
 - Docs only (no site files). PR #3 (portfolio renovation) merged as `1a36f4f` on Oct 29, 2026 and is live at https://michael-mcclung.github.io/ via GitHub Pages. Rollback tag `pre-renovation-2026-10-29` points to `fda53c8`.

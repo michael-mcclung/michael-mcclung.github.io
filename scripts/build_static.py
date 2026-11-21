@@ -15,6 +15,7 @@ REL_RE = re.compile(r"\{\{\s*'([^']+)'\s*\|\s*relative_url\s*\}\}")
 ABS_RE = re.compile(r"\{\{\s*'([^']+)'\s*\|\s*absolute_url\s*\}\}")
 PAGE_URL_ABS = re.compile(r"\{\{\s*page\.url\s*\|\s*absolute_url\s*\}\}")
 PAGE_TITLE = re.compile(r"\{%\s*if\s+page\.title\s*%\}\{\{\s*page\.title\s*\}\}\s*\|\s*\{%\s*endif\s*%\}")
+IF_RE = re.compile(r"\{%\s*if\s+(.*?)\s*%\}(.*?)\{%\s*endif\s*%\}", re.S)
 FRONT_MATTER = re.compile(r"^---\n(.*?)\n---\n", re.S)
 
 
@@ -39,6 +40,16 @@ def absolute_url(path: str) -> str:
     return SITE_URL.rstrip("/") + relative_url(path)
 
 
+def apply_ifs(text: str, page_url: str) -> str:
+    """Evaluate simple page.url comparisons so local preview matches Jekyll."""
+    def repl(m):
+        urls = re.findall(r"page\.url\s*==\s*'([^']+)'", m.group(1))
+        if page_url in urls:
+            return m.group(2)
+        return ""
+    return IF_RE.sub(repl, text)
+
+
 def render(text: str, page_url: str = "/", page_title: str = "") -> str:
     def incl(m):
         name = m.group(1).strip()
@@ -52,6 +63,7 @@ def render(text: str, page_url: str = "/", page_title: str = "") -> str:
     text = ABS_RE.sub(lambda m: absolute_url(m.group(1)), text)
     text = PAGE_URL_ABS.sub(absolute_url(page_url), text)
     text = PAGE_TITLE.sub((page_title + " | ") if page_title else "", text)
+    text = apply_ifs(text, page_url)
     text = re.sub(r"\{\%.*?\%\}", "", text)
     text = re.sub(r"\{\{.*?\}\}", "", text)
     return text
