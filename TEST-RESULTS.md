@@ -205,5 +205,7 @@ Home mobile fetch time `2026-11-21T05:05:12.234Z`. The other seven runs followed
 
 Home scores match the Oct 29, 2026 local and production home-page scores. Render-blocking Google Fonts and uncompressed local responses are called out by Lighthouse and are not regressions against those earlier home scores.
 
+After the blue-led palette change on the same branch, Lighthouse 12.6.1 was run again against the local home page. Mobile stayed **93 / 100 / 100 / 100**. Desktop stayed **99 / 100 / 100 / 100**.
+
 ---
 
