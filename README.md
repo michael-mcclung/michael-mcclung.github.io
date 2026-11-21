@@ -3,14 +3,14 @@
 Public portfolio for **Michael McClung** (Mac), Full Stack Software Engineer.  
 **Purpose:** Mac’s software engineering job search — recruiters and hiring managers.
 
-- **Live site (production until merge):** https://michael-mcclung.github.io  
+- **Live site:** https://michael-mcclung.github.io (PR #3 merged as `1a36f4f` on Oct 29, 2026; GitHub Pages)  
 - **Repository:** https://github.com/michael-mcclung/michael-mcclung.github.io  
 - **Default branch:** `master`  
-- **Renovation branch:** `renovation/portfolio-2026` (working copy audited at `/workspace/personal-site`, tip `c25c2f7`)  
+- **Renovation:** merged to `master` in PR #3 (`1a36f4f`, Oct 29, 2026). Documented from `renovation/portfolio-2026` tip `c25c2f7`.  
 - **Recovery tag:** `pre-renovation-2026-10-29` → `fda53c8546c14e156bf7a67419198bffd3aa1353`  
 - **Project tracker:** [TASK 011: Personal Website renovation](https://app.notion.com/p/409f021b1428818ba525d1ef46bff93e)
 
-This README describes the **renovated** site as verified from `renovation/portfolio-2026` (Oct 29, 2026, America/Chicago). Pre-merge production still matches `ARCHITECTURE-current.md` / tag `pre-renovation-2026-10-29` until the PR lands.
+This README describes the **renovated** site on `master`, live at the GitHub Pages URL above since PR #3 merged (Oct 29, 2026). `ARCHITECTURE-current.md` and tag `pre-renovation-2026-10-29` describe the pre-renovation baseline.
 
 **Headline (as implemented):** H1 `Michael McClung`, role line `Full Stack Software Engineer`, supporting line `I build software that fixes real business operations.`
 
@@ -65,7 +65,7 @@ No `Gemfile` in repo; CI Jekyll comes from GitHub’s Pages action / quality wor
 git clone https://github.com/michael-mcclung/michael-mcclung.github.io.git
 cd michael-mcclung.github.io
 git fetch origin
-git checkout renovation/portfolio-2026   # or master after merge
+git checkout master
 ```
 
 ### Preferred local preview (no Ruby)
@@ -202,7 +202,7 @@ cd _site && python3 -m http.server 8080
 # Lighthouse (Chrome DevTools or CLI) against the local home page — record in TEST-RESULTS.md
 ```
 
-After merge, re-check production URLs and record scores separately. LinkedIn often cannot be bot-verified (exclude or treat as inconclusive). Quality workflow already excludes `linkedin.com` from lychee hard-fail.
+Production home-page Lighthouse (Oct 29, 2026) and live internal URL checks (Oct 30, 2026) are recorded in `TEST-RESULTS.md`. After later production changes, re-check production URLs and record scores separately. LinkedIn often cannot be bot-verified (exclude or treat as inconclusive). Quality workflow already excludes `linkedin.com` from lychee hard-fail.
 
 ---
 
@@ -210,8 +210,8 @@ After merge, re-check production URLs and record scores separately. LinkedIn oft
 
 1. **LinkedIn** is not reliably bot-verifiable (anti-bot / 999 / captcha). Human browser check required.  
 2. **RollWithDFW** appears as a project card (archived sushi app; GitHub archive branch) but is **not** on the résumé — pending Mac’s review.  
-3. **Lighthouse** scores on record cover the **home page** only (local serve), not every route.  
-4. Production post-merge checks remain pending until `renovation/portfolio-2026` is merged and Pages redeploys.  
+3. **Lighthouse** scores on record cover the **home page** only (local serve, and live production measured Oct 29, 2026), not every route.  
+4. Production checks that were measured after merge are in `TEST-RESULTS.md` (Actions on `master` after `1a36f4f`, live internal links and the résumé PDF on Oct 30, 2026, production home-page Lighthouse on Oct 29, 2026). Responsive viewports, keyboard, and screen-reader checks are still not yet measured.  
 5. No Gemfile pins local Jekyll to CI; rely on `build_static.py` or Pages action Ruby set.  
 6. Anonymous GitHub Pages settings API remains unavailable; deploy is inferred from Actions + live host.  
 
