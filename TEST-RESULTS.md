@@ -207,5 +207,7 @@ Home scores match the Oct 29, 2026 local and production home-page scores. Render
 
 After the blue-led palette change on the same branch, Lighthouse 12.6.1 was run again against the local home page. Mobile stayed **93 / 100 / 100 / 100**. Desktop stayed **99 / 100 / 100 / 100**.
 
+After the Shoebox band and Folio card, the same local home-page run was **94 / 100 / 100 / 100** on mobile and **99 / 100 / 100 / 100** on desktop. Ruby and html-proofer are not installed in this environment. The workflow’s security checks (CSP, no `http://` in HTML/CSS/JS, both résumé PDFs) were run locally and passed. GitHub Actions runs the full Jekyll and html-proofer job on the branch.
+
 ---
 

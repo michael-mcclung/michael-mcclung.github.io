@@ -5,6 +5,12 @@ All notable changes to [michael-mcclung.github.io](https://github.com/michael-mc
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) where version tags are used. The portfolio renovation is merged to `master` (PR #3, `1a36f4f`, Oct 29, 2026) and live on GitHub Pages. Rollback tag `pre-renovation-2026-10-29` points to `fda53c8`.
 
+## [2026-11-21] — Shoebox promo and Folio
+
+- Home page has a Shoebox Business band under the hero, with Mac’s tagline, a short original description of the accounting software, and a link to shoeboxbusiness.com.
+- The hero photo badge no longer names ServiceTitan or Service Fusion.
+- Projects include Folio, the Next.js personal ledger. The card links only to the GitHub repo and uses a local copy of the repo’s dashboard screenshot.
+
 ## [2026-11-21] — blue-led palette
 
 - Navy and royal blue lead the hero, page headers, buttons, headings, tags, and experience timeline. Gold is limited to the hero rule, the active navigation underline, and the eyebrow mark on dark bands. Section bands alternate white and a light blue tint. The footer stays navy.

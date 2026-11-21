@@ -391,6 +391,31 @@ h3 { font-size: 1.2rem; margin: 0 0 0.35rem; font-weight: 700; }
   .portrait-wrap { max-width: 360px; }
 }
 
+/* Shoebox promo, directly under the hero */
+.shoebox-band {
+  padding: 3.25rem 0 3.5rem;
+  background: #fff;
+}
+.shoebox-panel {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 18px;
+  padding: clamp(1.35rem, 3vw, 2.25rem);
+  background: linear-gradient(180deg, #eef4fc 0%, #fff 46%);
+  box-shadow: var(--shadow);
+}
+.shoebox-quote {
+  max-width: none;
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+  line-height: 1.25;
+  color: var(--navy);
+}
+.shoebox-quote span { display: block; }
+.shoebox-quote span + span { margin-top: 0.45rem; }
+.shoebox-panel .lead { margin: 0; }
+.shoebox-panel .btn-row { margin-top: 1.35rem; }
+
 /* Cards / grids */
 .fact-grid,
 .skill-grid,
@@ -508,6 +533,25 @@ h3 { font-size: 1.2rem; margin: 0 0 0.35rem; font-weight: 700; }
   gap: 0.45rem 1rem;
   margin: 0.85rem 0 0;
   font-weight: 700;
+}
+.project-grid .project-feature { grid-column: 1 / -1; }
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.95fr);
+  gap: 1.25rem 1.5rem;
+  align-items: center;
+}
+.folio-shot {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+@media (max-width: 800px) {
+  .project-feature { grid-template-columns: 1fr; }
+  .folio-shot { height: 220px; }
 }
 
 @media (max-width: 960px) {

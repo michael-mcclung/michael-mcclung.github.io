@@ -39,8 +39,25 @@ title: Home
           <div class="code" aria-hidden="true">&lt;/&gt;</div>
           <div>
             <strong>Java · Spring Boot</strong>
-            <span>ServiceTitan · Service Fusion</span>
+            <span>Software Engineer</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shoebox-band" id="shoebox" aria-labelledby="shoebox-heading">
+    <div class="container">
+      <div class="shoebox-panel">
+        <p class="eyebrow">Shoebox Business</p>
+        <h2 id="shoebox-heading" class="shoebox-quote">
+          <span>Accounting was never supposed to be scary.</span>
+          <span>Your bookkeeper already knows: it's all in the box.</span>
+        </h2>
+        <p class="lead">Shoebox Business makes accounting software for small businesses. The year's books stay on the owner's computer, and Mac introduces owners to the team.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://shoeboxbusiness.com" target="_blank" rel="noopener noreferrer">Visit Shoebox Business</a>
+          <a class="btn btn-ghost" href="{{ '/#contact' | relative_url }}">Talk to me about your books</a>
         </div>
       </div>
     </div>
@@ -173,9 +190,19 @@ title: Home
       <div class="section-head reveal">
         <p class="eyebrow">Projects</p>
         <h2 id="projects-heading">Selected work</h2>
-        <p class="lead">A live tenant site, a field-service jobs API, and a sales-cleanup tool. Earlier projects are on the <a href="{{ '/main/projects/' | relative_url }}">projects page</a>.</p>
+        <p class="lead">A personal ledger, a live tenant site, a field-service jobs API, and a sales-cleanup tool. Earlier projects are on the <a href="{{ '/main/projects/' | relative_url }}">projects page</a>.</p>
       </div>
       <div class="project-grid">
+        <article class="card project-card project-feature reveal">
+          <div>
+            <p class="project-year">Next.js</p>
+            <h3><a href="https://github.com/michael-mcclung/folio-expense-tracker" target="_blank" rel="noopener noreferrer">Folio</a></h3>
+            <p>Personal income and expense ledger. Sign-in has staff and admin roles, and each person sees only their own book. Charts cover income, expenses, and spending by category. Export the filtered rows to CSV or Excel, or save a monthly PDF. The interface is in English and Vietnamese. The suite has 14 tests. It is not deployed.</p>
+            <p class="project-links"><a href="https://github.com/michael-mcclung/folio-expense-tracker" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p>
+            <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Charts</span></div>
+          </div>
+          <img class="folio-shot" src="{{ '/assets/img/folio-dashboard.png' | relative_url }}" width="1440" height="1423" alt="Folio dashboard with monthly income and expense bars and a spending chart">
+        </article>
         <article class="card project-card reveal">
           <p class="project-year">Live</p>
           <h3><a href="https://www.rollwithdfw.com" target="_blank" rel="noopener noreferrer">Roll With DFW</a></h3>
