@@ -1,6 +1,6 @@
 # Michael McClung — Personal Portfolio Website
 
-Public portfolio for **Michael McClung** (Mac), Full Stack Software Engineer.  
+Public portfolio for **Michael McClung** (Mac), operations and dispatch manager and software engineer.  
 **Purpose:** Mac’s software engineering job search — recruiters and hiring managers.
 
 - **Live site:** https://michael-mcclung.github.io (PR #3 merged as `1a36f4f` on Oct 29, 2026; GitHub Pages)  
@@ -12,7 +12,7 @@ Public portfolio for **Michael McClung** (Mac), Full Stack Software Engineer.
 
 This README describes the **renovated** site on `master`, live at the GitHub Pages URL above since PR #3 merged (Oct 29, 2026). `ARCHITECTURE-current.md` and tag `pre-renovation-2026-10-29` describe the pre-renovation baseline.
 
-**Headline (as implemented):** H1 `Michael McClung`, role line `Full Stack Software Engineer`, supporting line `I build software that fixes real business operations.`
+**Headline (as implemented):** H1 `Michael McClung`, role line `Operations & Dispatch Manager`, then tags for the rest of the current headline: Marketing & Client Development at Shoebox Business, Software Engineer (Java, Spring Boot), Field Service Operations, Route Optimization & Process Automation, and Former JPMorgan Chase.
 
 ---
 
@@ -92,9 +92,10 @@ jekyll serve
 ```
 index.html                 Home — hero, about, experience, projects, skills, resume CTA, contact
 main/journey/index.html    Experience (dedicated page)
-main/projects/index.html   Projects (incl. archived RollWithDFW sushi app → GitHub archive branch)
-main/resume/index.html     HTML résumé (phone + print); PDF download links
-assets/resume/Michael-McClung-Resume-2025.pdf   Valid PDF (~96 KB), served as static asset
+main/projects/index.html   Projects (live Roll With DFW tenant site, Service Jobs API, Sales Cleanup Report, earlier GitHub work)
+main/resume/index.html     HTML résumé (phone + print); operations and tech PDF downloads
+assets/resume/Michael-McClung-Resume-Operations.pdf   Current operations résumé
+assets/resume/Michael-McClung-Resume-Tech.pdf         Current tech résumé
 assets/css/site.css
 assets/js/site.js
 assets/img/portrait.jpg
@@ -118,11 +119,11 @@ README.md / CHANGELOG.md / SECURITY.md / .gitignore
 
 ### How the resume PDF is served
 
-- File: `assets/resume/Michael-McClung-Resume-2025.pdf` (checked in; valid `%PDF-1.4` with xref/EOF; ~96 534 bytes on the branch).  
-- Linked via Jekyll `relative_url` as `/assets/resume/Michael-McClung-Resume-2025.pdf` with `download="Michael-McClung-Resume-2025.pdf"`.  
-- Appears in homepage hero, page CTA bars, résumé page, and `sitemap.xml`.  
-- The old broken `main/resume/2025 Resume .pdf` (60-byte stub) is **removed**.  
-- HTML résumé remains available for screen readers / print; phone is on the résumé page (and PDF), not required in the global nav.
+- Files: `assets/resume/Michael-McClung-Resume-Operations.pdf` and `assets/resume/Michael-McClung-Resume-Tech.pdf`.  
+- Linked via Jekyll `relative_url` with matching `download` filenames.  
+- Appear in the homepage hero, page CTA bars, résumé page, and `sitemap.xml`.  
+- `assets/resume/Michael-McClung-Resume-2025.pdf` is removed so the site does not keep serving the outdated file.  
+- HTML résumé remains available for screen readers / print; phone is on the résumé page and in both PDFs, not in the global nav. The previous résumé already showed the same phone number.
 
 ### CSS / JS
 
@@ -181,7 +182,7 @@ Update `CHANGELOG.md` with the new production SHA after any rollback.
 ### Updating the résumé
 
 1. Re-save / export the PDF from the source document so the LinkedIn header text stays clean (`linkedin.com/in/mrmcclung`, not `/en/`).  
-2. Replace `assets/resume/Michael-McClung-Resume-2025.pdf` with that file (keep the path/name unless you update every link + sitemap + quality check).  
+2. Replace `assets/resume/Michael-McClung-Resume-Operations.pdf` and `assets/resume/Michael-McClung-Resume-Tech.pdf` (update every link, `sitemap.xml`, and the quality check if the filenames change).  
 3. Mirror facts into `main/resume/index.html` and the homepage experience/skills sections.  
 4. Keep Contact / Download Resume / LinkedIn CTAs on every page.  
 5. Spot-check PDF: size ≫ 60 bytes, starts with `%PDF`, contains `%%EOF`.
@@ -191,7 +192,7 @@ Update `CHANGELOG.md` with the new production SHA after any rollback.
 1. Add a card on `index.html` (projects section) and/or `main/projects/index.html`.  
 2. Use HTTPS links and `rel="noopener noreferrer"` on `target="_blank"`.  
 3. Do not invent employers, metrics, or features.  
-4. Note: **RollWithDFW** is a project card for the archived sushi-review app (source: archive/sushi-app branch); it is **not** listed on the HTML résumé (pending Mac’s review whether it should appear there).
+4. **Roll With DFW** on the site is the live tenant site at https://www.rollwithdfw.com (about page, tenant resources, Innago portal login). Source: https://github.com/michael-mcclung/rollwithdfw. Ignore that repo’s stale sushi description. Service Jobs API and Sales Cleanup Report are the other featured projects.
 
 ### Re-running link checks and Lighthouse
 
@@ -209,8 +210,8 @@ Production home-page Lighthouse (Oct 29, 2026) and live internal URL checks (Oct
 ## Known limitations
 
 1. **LinkedIn** is not reliably bot-verifiable (anti-bot / 999 / captcha). Human browser check required.  
-2. **RollWithDFW** appears as a project card (archived sushi app; GitHub archive branch) but is **not** on the résumé — pending Mac’s review.  
-3. **Lighthouse** scores on record cover the **home page** only (local serve, and live production measured Oct 29, 2026), not every route.  
+2. **Roll With DFW** is the live tenant site (https://www.rollwithdfw.com), not the archived sushi app. The GitHub repo description is still the old sushi text; the README and the live site are the source for the project card.  
+3. **Lighthouse** for the Nov 21, 2026 refresh was measured locally on all four routes (Lighthouse 12.6.1). Those scores are in `TEST-RESULTS.md`. Production scores for that refresh are not measured until it is deployed. The Oct 29, 2026 production numbers are the previous live home page.  
 4. Production checks that were measured after merge are in `TEST-RESULTS.md` (Actions on `master` after `1a36f4f`, live internal links and the résumé PDF on Oct 30, 2026, production home-page Lighthouse on Oct 29, 2026). Responsive viewports, keyboard, and screen-reader checks are still not yet measured.  
 5. No Gemfile pins local Jekyll to CI; rely on `build_static.py` or Pages action Ruby set.  
 6. Anonymous GitHub Pages settings API remains unavailable; deploy is inferred from Actions + live host.  

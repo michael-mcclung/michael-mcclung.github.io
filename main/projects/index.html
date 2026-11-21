@@ -12,11 +12,12 @@ title: Projects
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">Projects</p>
-      <h1>Software projects from full stack ideas to embedded systems.</h1>
-      <p>A selection of public GitHub work that shows application development, systems thinking, and hands-on technical problem solving.</p>
-            <div class="page-cta-bar">
-        <a class="btn btn-primary" href="mailto:mmcclung1124@gmail.com?subject=Software%20engineering%20opportunity">Contact</a>
-        <a class="btn btn-ghost" href="{{ '/assets/resume/Michael-McClung-Resume-2025.pdf' | relative_url }}" download="Michael-McClung-Resume-2025.pdf">Download Resume</a>
+      <h1>Projects</h1>
+      <p>Recent work is the Roll With DFW tenant site, a Java 21 field-service jobs API, and a Python sales-cleanup tool. Earlier public GitHub projects are listed below.</p>
+      <div class="page-cta-bar">
+        <a class="btn btn-primary" href="mailto:mmcclung1124@gmail.com?subject=Opportunity">Contact</a>
+        <a class="btn btn-ghost" href="{{ '/assets/resume/Michael-McClung-Resume-Operations.pdf' | relative_url }}" download="Michael-McClung-Resume-Operations.pdf">Operations résumé</a>
+        <a class="btn btn-ghost" href="{{ '/assets/resume/Michael-McClung-Resume-Tech.pdf' | relative_url }}" download="Michael-McClung-Resume-Tech.pdf">Tech résumé</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/mrmcclung" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
@@ -26,45 +27,72 @@ title: Projects
     <div class="container">
       <div class="project-grid">
         <article class="card project-card reveal">
-          <p class="project-year">Archived</p>
-          <h3>RollWithDFW</h3>
-          <p>Archived DFW sushi-review app (Angular frontend and Java Spring Boot backend). The live domain now serves a separate tenant hub.</p>
-          <p class="project-links"><a href="https://github.com/michael-mcclung/rollwithdfw/tree/archive/sushi-app" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a></p>
-          <div class="tags"><span>Angular</span><span>Spring Boot</span><span>REST</span></div>
+          <p class="project-year">Live</p>
+          <h2><a href="https://www.rollwithdfw.com" target="_blank" rel="noopener noreferrer">Roll With DFW</a></h2>
+          <p>Tenant site for the Roll With DFW rental home. It has an about page, a tenant resources page, and an Innago portal login for rent and repairs. The current site refreshes the header, logo, and company values.</p>
+          <p class="project-links">
+            <a href="https://www.rollwithdfw.com" target="_blank" rel="noopener noreferrer">Live site</a>
+            <a href="https://www.rollwithdfw.com/about/" target="_blank" rel="noopener noreferrer">About</a>
+            <a href="https://www.rollwithdfw.com/tenant-resources/" target="_blank" rel="noopener noreferrer">Tenant resources</a>
+            <a href="https://auth.innago.com/login" target="_blank" rel="noopener noreferrer">Innago login</a>
+            <a href="https://github.com/michael-mcclung/rollwithdfw" target="_blank" rel="noopener noreferrer">Source</a>
+          </p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>Netlify</span></div>
         </article>
         <article class="card project-card reveal">
+          <p class="project-year">Java 21</p>
+          <h2><a href="https://github.com/michael-mcclung/service-jobs-api" target="_blank" rel="noopener noreferrer">Service Jobs API</a></h2>
+          <p>REST API for creating, assigning, rescheduling, and tracking field-service jobs. Domain rules block invalid status changes. Java 21, Spring Boot, Spring Data JPA, and an in-memory H2 database. Errors use RFC 9457 Problem Details.</p>
+          <p class="project-links"><a href="https://github.com/michael-mcclung/service-jobs-api" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p>
+          <div class="tags"><span>Java 21</span><span>Spring Boot</span><span>REST</span></div>
+        </article>
+        <article class="card project-card reveal">
+          <p class="project-year">Python</p>
+          <h2><a href="https://github.com/michael-mcclung/sales-cleanup-report" target="_blank" rel="noopener noreferrer">Sales Cleanup Report</a></h2>
+          <p>Command-line tool that turns a messy sales or invoice CSV into clean data and an Excel summary. Rows that cannot be fixed go to a Needs Review sheet instead of being dropped. Python, pandas, and openpyxl.</p>
+          <p class="project-links"><a href="https://github.com/michael-mcclung/sales-cleanup-report" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p>
+          <div class="tags"><span>Python</span><span>pandas</span><span>Excel</span></div>
+        </article>
+      </div>
+
+      <div class="section-head subsection-head">
+        <p class="eyebrow">Earlier</p>
+        <h2>Earlier projects</h2>
+      </div>
+      <div class="project-grid">
+        <article class="card project-card reveal">
           <p class="project-year">2020</p>
-          <h3><a href="https://github.com/michael-mcclung/uSecure" target="_blank" rel="noopener noreferrer">uSecure ↗</a></h3>
+          <h2><a href="https://github.com/michael-mcclung/uSecure" target="_blank" rel="noopener noreferrer">uSecure</a></h2>
           <p>Home security system using facial recognition, voice commands, motion detection, Raspberry Pi hardware, and smartphone control.</p>
           <div class="tags"><span>Raspberry Pi</span><span>Computer Vision</span><span>IoT</span></div>
         </article>
         <article class="card project-card reveal">
           <p class="project-year">2019</p>
-          <h3><a href="https://github.com/michael-mcclung/Blockchain-Virtual-Mouse" target="_blank" rel="noopener noreferrer">Blockchain Virtual Mouse ↗</a></h3>
+          <h2><a href="https://github.com/michael-mcclung/Blockchain-Virtual-Mouse" target="_blank" rel="noopener noreferrer">Blockchain Virtual Mouse</a></h2>
           <p>Web interface exploring image processing, machine learning concepts, virtual mouse interaction, and blockchain transactions.</p>
           <div class="tags"><span>Web</span><span>Machine Learning</span><span>Blockchain</span></div>
         </article>
         <article class="card project-card reveal">
           <p class="project-year">2019</p>
-          <h3><a href="https://github.com/michael-mcclung/JavaConsole_OnlineShoppingSystem" target="_blank" rel="noopener noreferrer">Online Shopping System ↗</a></h3>
+          <h2><a href="https://github.com/michael-mcclung/JavaConsole_OnlineShoppingSystem" target="_blank" rel="noopener noreferrer">Online Shopping System</a></h2>
           <p>Java console application using object-oriented programming concepts to model shopping-cart and checkout behavior.</p>
           <div class="tags"><span>Java</span><span>OOP</span></div>
         </article>
         <article class="card project-card reveal">
           <p class="project-year">2018</p>
-          <h3><a href="https://github.com/michael-mcclung/Unix-File-System" target="_blank" rel="noopener noreferrer">Unix File System ↗</a></h3>
+          <h2><a href="https://github.com/michael-mcclung/Unix-File-System" target="_blank" rel="noopener noreferrer">Unix File System</a></h2>
           <p>C++ project simulating a command-line file system with familiar shell commands and directory operations.</p>
           <div class="tags"><span>C++</span><span>Systems</span></div>
         </article>
         <article class="card project-card reveal">
           <p class="project-year">2017</p>
-          <h3><a href="https://github.com/michael-mcclung/Speaker-Project" target="_blank" rel="noopener noreferrer">Speaker Project ↗</a></h3>
+          <h2><a href="https://github.com/michael-mcclung/Speaker-Project" target="_blank" rel="noopener noreferrer">Speaker Project</a></h2>
           <p>Embedded project using an MSP430 microcontroller, C, and assembly to generate programmed musical notes through a speaker.</p>
           <div class="tags"><span>C</span><span>Assembly</span><span>Embedded</span></div>
         </article>
         <article class="card project-card reveal">
           <p class="project-year">2016</p>
-          <h3><a href="https://github.com/michael-mcclung/Plant-Placement-Analyzer" target="_blank" rel="noopener noreferrer">Plant Placement Analyzer ↗</a></h3>
+          <h2><a href="https://github.com/michael-mcclung/Plant-Placement-Analyzer" target="_blank" rel="noopener noreferrer">Plant Placement Analyzer</a></h2>
           <p>Sensor-based C++ system designed to evaluate plant survivability using light, humidity, soil moisture, and temperature data.</p>
           <div class="tags"><span>C++</span><span>Sensors</span><span>Hardware</span></div>
         </article>

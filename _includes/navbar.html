@@ -7,11 +7,11 @@
     </button>
     <ul class="nav-list" id="primary-nav">
       <li><a href="{{ '/#about' | relative_url }}">About</a></li>
-      <li><a href="{{ '/main/journey/' | relative_url }}">Experience</a></li>
-      <li><a href="{{ '/main/projects/' | relative_url }}">Projects</a></li>
+      <li><a href="{{ '/main/journey/' | relative_url }}"{% if page.url == '/main/journey/' or page.url == '/main/journey/index.html' %} aria-current="page"{% endif %}>Experience</a></li>
+      <li><a href="{{ '/main/projects/' | relative_url }}"{% if page.url == '/main/projects/' or page.url == '/main/projects/index.html' %} aria-current="page"{% endif %}>Projects</a></li>
       <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
-      <li><a href="{{ '/main/resume/' | relative_url }}">Resume</a></li>
-      <li><a class="nav-cta" href="mailto:mmcclung1124@gmail.com?subject=Software%20engineering%20opportunity">Contact</a></li>
+      <li><a href="{{ '/main/resume/' | relative_url }}"{% if page.url == '/main/resume/' or page.url == '/main/resume/index.html' %} aria-current="page"{% endif %}>Resume</a></li>
+      <li><a class="nav-cta" href="mailto:mmcclung1124@gmail.com?subject=Opportunity">Contact</a></li>
     </ul>
   </nav>
 </header>

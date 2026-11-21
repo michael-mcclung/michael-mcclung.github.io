@@ -151,3 +151,59 @@ Documentation Specialist did **not** re-run Lighthouse. The local table is the S
 | Documentation Specialist | Local `_site` HTTP inventory + PDF validity | Oct 29, 2026 | Internal local links + PDF pass; LinkedIn not bot-checked; production not measured that day |
 | Docs sync | Actions conclusions on master after `1a36f4f` and on `8b396d5`; live internal HTTP + PDF; production home-page Lighthouse recorded from the Oct 29, 2026 live measurement | Oct 30, 2026 | See §1, §2c, and §5. LinkedIn not bot-checked. |
 | Independent reviewer | Chief of Staff reviewed PR #3 and checked the facts, the contact links, the 7 repo links, the real Jekyll build, and the rollback tag `pre-renovation-2026-10-29` | Oct 29, 2026, 9:41 PM CT | **PASS** (team-reported) |
+
+---
+
+## 7. Portfolio refresh — local checks (Nov 21, 2026)
+
+Branch `cursor/portfolio-refresh-4406`. Served with `python3 scripts/build_static.py` and `python3 -m http.server 8080` in `_site`. The local server does not gzip responses. These scores are local, not production.
+
+### Link check
+
+Internal pages, CSS, JS, portrait, favicon, `robots.txt`, `sitemap.xml`, and both résumé PDFs returned **200**. PDFs start with `%PDF-1.7` and end with `%%EOF`. The old path `/assets/resume/Michael-McClung-Resume-2025.pdf` returns **404** on this branch (the file was removed).
+
+In-page hashes (`#main`, `/#about`, `/#skills`) resolve.
+
+External URLs requested with a browser user agent:
+
+| URL | Result |
+|-----|--------|
+| https://shoeboxbusiness.com | 200 (redirects to https://www.shoeboxbusiness.com/) |
+| https://www.rollwithdfw.com | 200 |
+| https://www.rollwithdfw.com/about/ | 200 |
+| https://www.rollwithdfw.com/tenant-resources/ | 200 |
+| https://auth.innago.com/login | 200 |
+| https://github.com/michael-mcclung | 200 |
+| https://github.com/michael-mcclung/rollwithdfw | 200 |
+| https://github.com/michael-mcclung/service-jobs-api | 200 |
+| https://github.com/michael-mcclung/sales-cleanup-report | 200 |
+| https://github.com/michael-mcclung/uSecure | 200 |
+| https://github.com/michael-mcclung/Blockchain-Virtual-Mouse | 200 |
+| https://github.com/michael-mcclung/JavaConsole_OnlineShoppingSystem | 200 |
+| https://github.com/michael-mcclung/Unix-File-System | 200 |
+| https://github.com/michael-mcclung/Speaker-Project | 200 |
+| https://github.com/michael-mcclung/Plant-Placement-Analyzer | 200 |
+| https://github.com/michael-mcclung/michael-mcclung.github.io | 200 |
+| https://michael-mcclung.github.io/ and the three subpages | 200 (current production, before this branch) |
+| https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap | 200 |
+| https://www.linkedin.com/in/mrmcclung | **not bot-checked as a pass** — HTTP 999 |
+
+`https://fonts.googleapis.com` and `https://fonts.gstatic.com` with no path return 404. Those origins are preconnect hints. The stylesheet URL above is the one the pages load.
+
+No horizontal overflow at 390, 768, 900, 1100, 1280, or 1440 CSS pixels on the home page.
+
+### Lighthouse 12.6.1
+
+Home mobile fetch time `2026-11-21T05:05:12.234Z`. The other seven runs followed in the same session. Categories are Performance / Accessibility / Best practices / SEO.
+
+| Page | Mobile | Desktop |
+|------|--------|---------|
+| `/` | **93 / 100 / 100 / 100** | **99 / 100 / 100 / 100** |
+| `/main/journey/` | **95 / 100 / 100 / 100** | **100 / 100 / 100 / 100** |
+| `/main/projects/` | **97 / 100 / 100 / 100** | **100 / 100 / 100 / 100** |
+| `/main/resume/` | **100 / 100 / 100 / 100** | **99 / 100 / 100 / 100** |
+
+Home scores match the Oct 29, 2026 local and production home-page scores. Render-blocking Google Fonts and uncompressed local responses are called out by Lighthouse and are not regressions against those earlier home scores.
+
+---
+

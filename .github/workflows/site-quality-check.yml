@@ -63,5 +63,6 @@ jobs:
             echo 'Insecure HTTP URL detected.'
             exit 1
           fi
-          test -f assets/resume/Michael-McClung-Resume-2025.pdf
+          test -f assets/resume/Michael-McClung-Resume-Operations.pdf
+          test -f assets/resume/Michael-McClung-Resume-Tech.pdf
           echo 'Site quality checks passed.'
