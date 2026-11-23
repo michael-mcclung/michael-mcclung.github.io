@@ -541,17 +541,22 @@ h3 { font-size: 1.2rem; margin: 0 0 0.35rem; font-weight: 700; }
   gap: 1.25rem 1.5rem;
   align-items: center;
 }
-.folio-shot {
+.folio-shot,
+.project-shot {
   width: 100%;
-  height: 280px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: top;
   border-radius: 12px;
   border: 1px solid var(--border);
+  background: var(--bg-blue);
+}
+.project-card:not(.project-feature) .project-shot {
+  margin-bottom: 0.95rem;
 }
 @media (max-width: 800px) {
   .project-feature { grid-template-columns: 1fr; }
-  .folio-shot { height: 220px; }
 }
 
 @media (max-width: 960px) {
